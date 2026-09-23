@@ -1,0 +1,12 @@
+---
+description: Separate feature behavior from presentational UI components
+alwaysApply: true
+---
+
+# Container and Presentation Pattern
+
+- Use containers for data access, state orchestration, mutations, and side effects.
+- Keep presentation components focused on rendering props and emitting typed user events.
+- Presentation components must not call APIs or import feature stores directly.
+- Prefer colocating each container with its presentation component and feature-specific types.
+- Do not split trivial components when the separation adds indirection without a meaningful behavior/UI boundary.

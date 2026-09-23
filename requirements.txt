@@ -1,0 +1,27 @@
+Candidate brief — Stockroom Requests (45 minutes)
+
+Scenario
+
+An office keeps supplies in a stockroom. Employees request items such as keyboards, cables, and notebooks. Build a small app where staff can see current stock and pending requests, then fulfill a request.
+
+Requirements
+
+Back it with a database — your choice of engine. The app must read its data from the database.
+Seed it with fake items and requests, including at least one request that cannot be fulfilled because stock is too low.
+Fulfill a request from the dashboard. This should mark the request as fulfilled, reduce the item's stock, and update the view.
+Don't allow fulfillment when there isn't enough stock.
+
+If you have time
+
+Add a form to create a request for an existing item.
+
+Ground rules
+
+45 minutes, hard stop.
+Working beats complete. Complete beats pretty.
+Any stack, any tools — Cursor, Claude Code, Windsurf, whatever you normally use.
+Keep it simple, and think out loud as you go.
+
+Logistics
+
+Share your screen when you're ready and we'll start the clock. Ask questions at any point.

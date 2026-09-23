@@ -1,0 +1,12 @@
+---
+description: Use Zustand intentionally for shared client-side state
+alwaysApply: true
+---
+
+# Zustand State
+
+- Use Zustand as the client-side state library.
+- Keep server data on the server by default; use Zustand only when client-side sharing or coordination is needed.
+- Keep stores small and feature-focused, with typed state and actions.
+- Select only the state a component needs to avoid unnecessary rerenders.
+- Do not duplicate derived values in the store when they can be computed from source state.

@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum RequestStatus {
+  PENDING
+  FULFILLED
+}
+
+model Item {
+  id        String         @id @default(uuid()) @db.Uuid
+  name      String         @unique
+  stock     Int
+  requests  StockRequest[]
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model StockRequest {
+  id          String        @id @default(uuid()) @db.Uuid
+  itemId      String        @db.Uuid
+  item        Item          @relation(fields: [itemId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  requestedBy String
+  quantity    Int
+  status      RequestStatus @default(PENDING)
+  fulfilledAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([status, createdAt])
+  @@index([itemId, status])
+}

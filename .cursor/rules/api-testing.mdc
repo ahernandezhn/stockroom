@@ -1,0 +1,13 @@
+---
+description: Require focused automated coverage for application APIs
+alwaysApply: true
+---
+
+# API Test Coverage
+
+- Add automated tests for every API route and server mutation.
+- Cover the successful path, input validation, missing resources, and domain conflicts where applicable.
+- Verify response status and body as well as persisted database changes.
+- Keep tests deterministic and isolate database state between cases.
+- When fixing an API bug, add a regression test that fails without the fix.
+- Prefer focused API integration tests over mocks that bypass route and persistence behavior.

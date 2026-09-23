@@ -1,0 +1,12 @@
+---
+description: Use the installed Next.js 16 APIs and current project conventions
+alwaysApply: true
+---
+
+# Next.js 16
+
+- Build with Next.js 16, preferring the latest compatible stable release.
+- Before writing Next.js code, read the relevant guide in `node_modules/next/dist/docs/`.
+- Treat those local docs as authoritative because APIs and conventions may differ from earlier Next.js versions.
+- Follow App Router, Server Component, caching, and request API conventions documented by the installed version.
+- Heed deprecations and avoid relying on remembered behavior from older versions.
